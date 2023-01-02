@@ -1,0 +1,26 @@
+<% if (errors != undefined) { %>
+    <ul>
+      <% errors.forEach((error) => { %>
+      <li><%= error.msg %></li>
+      <% }) %>
+    </ul>
+    <% } %>
+    
+    <form action="/employees/edit/<%= employee.eid %>" method="POST">
+      <b><label>EID</label></b>
+      <input name="eid" value="<%= employee.eid %>" readonly />
+      <p></p>
+      <b><label>Name</label></b>
+      <input type="text" name="ename" value="<%= employee.ename %>"/>
+      <p></p>
+      <b><label>Role</label></b>
+      <input type="text" name="role" value="<%= employee.role %>" />
+      <p></p>
+      <b><label>Salary</label></b>
+      <input type="text" name="salary" value="<%= employee.salary %>" />
+      <p></p>
+      <b><input type="submit" value="Update" /></b>
+    </form>
+    <a href="/" style="font-size: 20;">home</a>
+    <p></p>
+    <a href="/employees" style="font-size: 20;">Back</a>

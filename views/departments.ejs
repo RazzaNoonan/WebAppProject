@@ -1,0 +1,28 @@
+<h1>Departments</h1>
+<table border="1">
+  <tr>
+    <th>DID</th>
+    <th>Name</th>
+    <th>Budget</th>
+    <th>Location</th>
+    <th>Delete</th>
+  </tr>
+<% departments.forEach((d) => { %>
+  <tr>
+    <td>
+        <%= d.did %>
+    </td>
+    <td>
+        <%= d.dname %>
+    </td>
+    <td>
+        <%= d.budget %>
+    </td>
+    <td>
+        <%= d.county %>
+    </td>
+    <td><a href="/departments/delete/<%= d.did %>">Delete</a></td>
+  </tr>
+<% }) %>
+</table>
+<a href="/" style="font-size: 20;">home</a>
